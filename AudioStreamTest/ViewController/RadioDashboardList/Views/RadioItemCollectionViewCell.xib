@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RadioItemCollectionViewCell" customModule="AudioStreamTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="222"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="222"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6s-TP-KfP" customClass="ShadowedView" customModule="AudioStreamTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="222"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="27I-RI-Uft">
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="222"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="PRq-1h-jkg">
+                                <rect key="frame" x="8" y="8" width="133" height="206"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DnB Radio Record" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRp-zh-zU8">
+                                        <rect key="frame" x="0.0" y="160.5" width="133" height="45.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PRq-1h-jkg" secondAttribute="trailing" constant="8" id="09Z-Kj-GLO"/>
+                            <constraint firstAttribute="bottom" secondItem="27I-RI-Uft" secondAttribute="bottom" id="8Vc-9P-yOg"/>
+                            <constraint firstItem="PRq-1h-jkg" firstAttribute="leading" secondItem="s6s-TP-KfP" secondAttribute="leading" constant="8" id="KH9-96-hFU"/>
+                            <constraint firstAttribute="trailing" secondItem="27I-RI-Uft" secondAttribute="trailing" id="aX5-YY-DpU"/>
+                            <constraint firstItem="27I-RI-Uft" firstAttribute="top" secondItem="s6s-TP-KfP" secondAttribute="top" id="dfR-TD-KEJ"/>
+                            <constraint firstItem="27I-RI-Uft" firstAttribute="leading" secondItem="s6s-TP-KfP" secondAttribute="leading" id="s6W-kK-C41"/>
+                            <constraint firstItem="PRq-1h-jkg" firstAttribute="top" secondItem="s6s-TP-KfP" secondAttribute="top" constant="8" id="sDi-LX-h4g"/>
+                            <constraint firstAttribute="bottom" secondItem="PRq-1h-jkg" secondAttribute="bottom" constant="8" id="yEt-WO-8yR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="s6s-TP-KfP" secondAttribute="bottom" id="Nc6-ZG-qHF"/>
+                <constraint firstItem="s6s-TP-KfP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hm7-Fw-bQf"/>
+                <constraint firstItem="s6s-TP-KfP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iPb-8F-jbt"/>
+                <constraint firstAttribute="trailing" secondItem="s6s-TP-KfP" secondAttribute="trailing" id="ltd-Wa-GTk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="149" height="222"/>
+            <connections>
+                <outlet property="containerView" destination="s6s-TP-KfP" id="4A9-wx-f49"/>
+                <outlet property="posterImageView" destination="27I-RI-Uft" id="qrQ-Fu-8fL"/>
+                <outlet property="streamTitleLabel" destination="ZRp-zh-zU8" id="ECe-1C-pNy"/>
+            </connections>
+            <point key="canvasLocation" x="-83.333333333333343" y="176.11607142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>

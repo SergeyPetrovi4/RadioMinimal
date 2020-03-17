@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		6779BFE924178D8E00DCAE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779BFE824178D8E00DCAE26 /* AppDelegate.swift */; };
 		6779BFEB24178D8E00DCAE26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779BFEA24178D8E00DCAE26 /* SceneDelegate.swift */; };
-		6779BFED24178D8E00DCAE26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779BFEC24178D8E00DCAE26 /* ViewController.swift */; };
+		6779BFED24178D8E00DCAE26 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779BFEC24178D8E00DCAE26 /* PlayerViewController.swift */; };
 		6779BFF024178D8E00DCAE26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6779BFEE24178D8E00DCAE26 /* Main.storyboard */; };
 		6779BFF224178D9000DCAE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6779BFF124178D9000DCAE26 /* Assets.xcassets */; };
 		6779BFF524178D9000DCAE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6779BFF324178D9000DCAE26 /* LaunchScreen.storyboard */; };
+		67CF412E241BFA5F00236F98 /* RadioDashboardListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF412B241BFA5F00236F98 /* RadioDashboardListContract.swift */; };
+		67CF412F241BFA5F00236F98 /* RadioDashboardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF412C241BFA5F00236F98 /* RadioDashboardListPresenter.swift */; };
+		67CF4130241BFA5F00236F98 /* RadioDashboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF412D241BFA5F00236F98 /* RadioDashboardListViewController.swift */; };
+		67CF4133241BFAA600236F98 /* RadioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF4132241BFAA600236F98 /* RadioItem.swift */; };
+		67CF4136241BFB3B00236F98 /* RadioItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF4135241BFB3B00236F98 /* RadioItems.swift */; };
+		67CF4139241BFFBC00236F98 /* RadioDashboardFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF4138241BFFBC00236F98 /* RadioDashboardFlowLayout.swift */; };
+		67CF413D241C041500236F98 /* RadioItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF413B241C041500236F98 /* RadioItemCollectionViewCell.swift */; };
+		67CF413E241C041500236F98 /* RadioItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CF413C241C041500236F98 /* RadioItemCollectionViewCell.xib */; };
+		67CF4141241CAA8D00236F98 /* UIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF4140241CAA8D00236F98 /* UIVIew.swift */; };
+		67CF4144241D828000236F98 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF4143241D828000236F98 /* StoryboardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6779BFE524178D8E00DCAE26 /* AudioStreamTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioStreamTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6779BFE524178D8E00DCAE26 /* Radio Minimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radio Minimal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6779BFE824178D8E00DCAE26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6779BFEA24178D8E00DCAE26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6779BFEC24178D8E00DCAE26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6779BFEC24178D8E00DCAE26 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		6779BFEF24178D8E00DCAE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6779BFF124178D9000DCAE26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6779BFF424178D9000DCAE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6779BFF624178D9000DCAE26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67CF412B241BFA5F00236F98 /* RadioDashboardListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioDashboardListContract.swift; sourceTree = "<group>"; };
+		67CF412C241BFA5F00236F98 /* RadioDashboardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioDashboardListPresenter.swift; sourceTree = "<group>"; };
+		67CF412D241BFA5F00236F98 /* RadioDashboardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioDashboardListViewController.swift; sourceTree = "<group>"; };
+		67CF4132241BFAA600236F98 /* RadioItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioItem.swift; sourceTree = "<group>"; };
+		67CF4135241BFB3B00236F98 /* RadioItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioItems.swift; sourceTree = "<group>"; };
+		67CF4138241BFFBC00236F98 /* RadioDashboardFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioDashboardFlowLayout.swift; sourceTree = "<group>"; };
+		67CF413B241C041500236F98 /* RadioItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		67CF413C241C041500236F98 /* RadioItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		67CF4140241CAA8D00236F98 /* UIVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVIew.swift; sourceTree = "<group>"; };
+		67CF4143241D828000236F98 /* StoryboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +68,7 @@
 		6779BFE624178D8E00DCAE26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6779BFE524178D8E00DCAE26 /* AudioStreamTest.app */,
+				6779BFE524178D8E00DCAE26 /* Radio Minimal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +76,129 @@
 		6779BFE724178D8E00DCAE26 /* AudioStreamTest */ = {
 			isa = PBXGroup;
 			children = (
-				6779BFE824178D8E00DCAE26 /* AppDelegate.swift */,
-				6779BFEA24178D8E00DCAE26 /* SceneDelegate.swift */,
-				6779BFEC24178D8E00DCAE26 /* ViewController.swift */,
-				6779BFEE24178D8E00DCAE26 /* Main.storyboard */,
-				6779BFF124178D9000DCAE26 /* Assets.xcassets */,
-				6779BFF324178D9000DCAE26 /* LaunchScreen.storyboard */,
-				6779BFF624178D9000DCAE26 /* Info.plist */,
+				67CF4123241BF94B00236F98 /* Application */,
+				67CF4126241BF98000236F98 /* Storyboard */,
+				67CF4125241BF96800236F98 /* ViewController */,
+				67CF4124241BF95C00236F98 /* Library */,
+				67CF4128241BF9B300236F98 /* Resources */,
 			);
 			path = AudioStreamTest;
+			sourceTree = "<group>";
+		};
+		67CF4123241BF94B00236F98 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6779BFF624178D9000DCAE26 /* Info.plist */,
+				6779BFE824178D8E00DCAE26 /* AppDelegate.swift */,
+				6779BFEA24178D8E00DCAE26 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		67CF4124241BF95C00236F98 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				67CF4142241D827400236F98 /* Managers */,
+				67CF413F241CAA2200236F98 /* Protocols */,
+				67CF4134241BFB2200236F98 /* RadioItems */,
+				67CF4131241BFA8000236F98 /* Model */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		67CF4125241BF96800236F98 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				67CF4129241BFA2700236F98 /* RadioDashboardList */,
+				67CF412A241BFA4000236F98 /* Player */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		67CF4126241BF98000236F98 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6779BFEE24178D8E00DCAE26 /* Main.storyboard */,
+				6779BFF324178D9000DCAE26 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		67CF4128241BF9B300236F98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6779BFF124178D9000DCAE26 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		67CF4129241BFA2700236F98 /* RadioDashboardList */ = {
+			isa = PBXGroup;
+			children = (
+				67CF412D241BFA5F00236F98 /* RadioDashboardListViewController.swift */,
+				67CF412B241BFA5F00236F98 /* RadioDashboardListContract.swift */,
+				67CF412C241BFA5F00236F98 /* RadioDashboardListPresenter.swift */,
+				67CF413A241C03E200236F98 /* Views */,
+				67CF4137241BFE5800236F98 /* LayoutFlow */,
+			);
+			path = RadioDashboardList;
+			sourceTree = "<group>";
+		};
+		67CF412A241BFA4000236F98 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				6779BFEC24178D8E00DCAE26 /* PlayerViewController.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		67CF4131241BFA8000236F98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67CF4132241BFAA600236F98 /* RadioItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67CF4134241BFB2200236F98 /* RadioItems */ = {
+			isa = PBXGroup;
+			children = (
+				67CF4135241BFB3B00236F98 /* RadioItems.swift */,
+			);
+			path = RadioItems;
+			sourceTree = "<group>";
+		};
+		67CF4137241BFE5800236F98 /* LayoutFlow */ = {
+			isa = PBXGroup;
+			children = (
+				67CF4138241BFFBC00236F98 /* RadioDashboardFlowLayout.swift */,
+			);
+			path = LayoutFlow;
+			sourceTree = "<group>";
+		};
+		67CF413A241C03E200236F98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67CF413B241C041500236F98 /* RadioItemCollectionViewCell.swift */,
+				67CF413C241C041500236F98 /* RadioItemCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67CF413F241CAA2200236F98 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				67CF4140241CAA8D00236F98 /* UIVIew.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		67CF4142241D827400236F98 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				67CF4143241D828000236F98 /* StoryboardManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +218,7 @@
 			);
 			name = AudioStreamTest;
 			productName = AudioStreamTest;
-			productReference = 6779BFE524178D8E00DCAE26 /* AudioStreamTest.app */;
+			productReference = 6779BFE524178D8E00DCAE26 /* Radio Minimal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6779BFF524178D9000DCAE26 /* LaunchScreen.storyboard in Resources */,
+				67CF413E241C041500236F98 /* RadioItemCollectionViewCell.xib in Resources */,
 				6779BFF224178D9000DCAE26 /* Assets.xcassets in Resources */,
 				6779BFF024178D8E00DCAE26 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +273,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6779BFED24178D8E00DCAE26 /* ViewController.swift in Sources */,
+				67CF412E241BFA5F00236F98 /* RadioDashboardListContract.swift in Sources */,
+				6779BFED24178D8E00DCAE26 /* PlayerViewController.swift in Sources */,
+				67CF4144241D828000236F98 /* StoryboardManager.swift in Sources */,
+				67CF4141241CAA8D00236F98 /* UIVIew.swift in Sources */,
 				6779BFE924178D8E00DCAE26 /* AppDelegate.swift in Sources */,
+				67CF4139241BFFBC00236F98 /* RadioDashboardFlowLayout.swift in Sources */,
+				67CF4130241BFA5F00236F98 /* RadioDashboardListViewController.swift in Sources */,
+				67CF4136241BFB3B00236F98 /* RadioItems.swift in Sources */,
+				67CF412F241BFA5F00236F98 /* RadioDashboardListPresenter.swift in Sources */,
+				67CF4133241BFAA600236F98 /* RadioItem.swift in Sources */,
 				6779BFEB24178D8E00DCAE26 /* SceneDelegate.swift in Sources */,
+				67CF413D241C041500236F98 /* RadioItemCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,13 +430,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3J9PFDL3;
-				INFOPLIST_FILE = AudioStreamTest/Info.plist;
+				INFOPLIST_FILE = AudioStreamTest/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KRASIUK.AudioStreamTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Radio Minimal";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,13 +448,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3J9PFDL3;
-				INFOPLIST_FILE = AudioStreamTest/Info.plist;
+				INFOPLIST_FILE = AudioStreamTest/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KRASIUK.AudioStreamTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Radio Minimal";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
