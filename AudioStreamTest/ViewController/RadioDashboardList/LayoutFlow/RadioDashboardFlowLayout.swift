@@ -57,7 +57,7 @@ class RadioDashboardFlowLayout: UICollectionViewFlowLayout {
                 let numberOfColumns: CGFloat = 1.0
                 let itemWidth = (self.collectionView!.frame.width - (self.padding * 2) - (numberOfColumns - 1)) / numberOfColumns
                 
-                return CGSize(width: itemWidth, height: itemWidth / 4)
+                return CGSize(width: itemWidth, height: itemWidth / 6)
             }
             
         }

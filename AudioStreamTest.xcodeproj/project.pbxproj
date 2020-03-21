@@ -26,6 +26,8 @@
 		67FD93A32423A53C00793F93 /* AVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD93A22423A53C00793F93 /* AVPlayer.swift */; };
 		67FD93A62423EF7900793F93 /* PlayerControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD93A52423EF7900793F93 /* PlayerControlView.swift */; };
 		67FD93A82423EF8500793F93 /* PlayerControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FD93A72423EF8500793F93 /* PlayerControlView.xib */; };
+		67FD93AB2425E19F00793F93 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD93AA2425E19F00793F93 /* MarqueeLabel.swift */; };
+		67FD93AF2425E1FA00793F93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FD93AE2425E1FA00793F93 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		67FD93A22423A53C00793F93 /* AVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayer.swift; sourceTree = "<group>"; };
 		67FD93A52423EF7900793F93 /* PlayerControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlView.swift; sourceTree = "<group>"; };
 		67FD93A72423EF8500793F93 /* PlayerControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerControlView.xib; sourceTree = "<group>"; };
+		67FD93AA2425E19F00793F93 /* MarqueeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
+		67FD93AE2425E1FA00793F93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67FD93AF2425E1FA00793F93 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,7 @@
 			children = (
 				6779BFE724178D8E00DCAE26 /* AudioStreamTest */,
 				6779BFE624178D8E00DCAE26 /* Products */,
+				67FD93AD2425E1FA00793F93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,10 +218,35 @@
 		67FD93A42423EF1000793F93 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				67FD93AC2425E1AC00793F93 /* MarqueeLabel */,
+				67FD93A92425E18500793F93 /* PlayerControlView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		67FD93A92425E18500793F93 /* PlayerControlView */ = {
+			isa = PBXGroup;
+			children = (
 				67FD93A52423EF7900793F93 /* PlayerControlView.swift */,
 				67FD93A72423EF8500793F93 /* PlayerControlView.xib */,
 			);
-			path = CustomViews;
+			path = PlayerControlView;
+			sourceTree = "<group>";
+		};
+		67FD93AC2425E1AC00793F93 /* MarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				67FD93AA2425E19F00793F93 /* MarqueeLabel.swift */,
+			);
+			path = MarqueeLabel;
+			sourceTree = "<group>";
+		};
+		67FD93AD2425E1FA00793F93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67FD93AE2425E1FA00793F93 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +334,7 @@
 				67CF4133241BFAA600236F98 /* RadioItem.swift in Sources */,
 				67FD93A62423EF7900793F93 /* PlayerControlView.swift in Sources */,
 				6779BFEB24178D8E00DCAE26 /* SceneDelegate.swift in Sources */,
+				67FD93AB2425E19F00793F93 /* MarqueeLabel.swift in Sources */,
 				67CF413D241C041500236F98 /* RadioItemCollectionViewCell.swift in Sources */,
 				67FD93A32423A53C00793F93 /* AVPlayer.swift in Sources */,
 			);
