@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 typealias ActionHandler = ((_ action: PlayerControlView.Action) -> Void)
 
@@ -30,6 +31,7 @@ class PlayerControlView: UIView {
         instance.clipsToBounds = true
         instance.completion = completion
         instance.streamTitleLabel.text = " "
+        instance.streamTitleLabel.type = .leftRight
         instance.posterImageView.image = UIImage(named: "emptyPoster")
         
         NSLayoutConstraint.activate([
@@ -46,7 +48,7 @@ class PlayerControlView: UIView {
     // MARK: - Outlets
     
     @IBOutlet weak var posterImageView: UIImageView!
-    @IBOutlet weak var streamTitleLabel: UILabel!
+    @IBOutlet weak var streamTitleLabel: MarqueeLabel!
     
     private var completion: ActionHandler!
     private var playState = Action.play
@@ -69,6 +71,8 @@ class PlayerControlView: UIView {
     // MARK: - Methods
     
     func set(action: Action) {
+        
+        self.streamTitleLabel.text = " "
         
         if action == .play {
             self.playButton.setImage(UIImage(systemName: "stop.fill"), for: .normal)
