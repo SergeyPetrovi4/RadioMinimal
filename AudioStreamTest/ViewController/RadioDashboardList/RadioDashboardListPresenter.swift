@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVKit
 
 class RadioDashboardListPresenter: RadioDashboardListPresenterProtocol {
     
@@ -23,4 +24,8 @@ class RadioDashboardListPresenter: RadioDashboardListPresenterProtocol {
     var items: [RadioItem] = {
         return RadioItems.values
     }()
+    
+    func play(itemAt index: Int, controller: UIViewController?) {
+        PlayerManager.shared.play(stream: self.items[index], controller: controller)
+    }
 }

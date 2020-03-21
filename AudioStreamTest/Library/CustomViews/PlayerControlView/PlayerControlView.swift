@@ -92,4 +92,9 @@ class PlayerControlView: UIView {
     func configure(image name: String) {
         self.posterImageView.image = UIImage(named: name)
     }
+    
+    func disableIfNeeded(action: Action) {
+        
+//        self. action == .forward
+    }
 }

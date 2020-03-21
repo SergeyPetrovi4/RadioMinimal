@@ -14,8 +14,9 @@ enum RadioURL: String {
     case dfmRussianDance = "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp"
     case dnbAtmospheric = "http://brokenbeats.net:8000/tune"
     case dnbMyRadio = "http://relay.myradio.ua:8000/DrumAndBass128.mp3"
-    case countryRadio = "https://22113.live.streamtheworld.com/WUSZFMAAC.aac"
+    case countryRadio = "https://live.leanstream.co/CKRYFM"
     case americasCountry = "https://ais-sa2.cdnstream1.com/1976_128.mp3"
+    case batYamRadioRus = "http://891fm.streamgates.net/891Fm"
 }
 
 struct RadioItems {
@@ -24,10 +25,12 @@ struct RadioItems {
             RadioItem(title: "DnB Radio Record", streamURL: .dnbRadioRecord, imageName: "radioRecord"),
             RadioItem(title: "DFM Pop Dance", streamURL: .dfmPopDance, imageName: "dfmPopDance"),
             RadioItem(title: "DFM Russian Dance", streamURL: .dfmRussianDance, imageName: "russianDance"),
+            RadioItem(title: "Bat Yam 89.1 FM", streamURL: .batYamRadioRus, imageName: "batYamRussian"),
             RadioItem(title: "DnB Atmospheric", streamURL: .dnbAtmospheric, imageName: "dnbAtmospheric"),
             RadioItem(title: "DnB My Radio", streamURL: .dnbMyRadio, imageName: "dnbMyRadio"),
-            RadioItem(title: "Country Radio", streamURL: .countryRadio, imageName: "countryRadio"),
+            RadioItem(title: "Country 105 FM", streamURL: .countryRadio, imageName: "countryRadio"),
             RadioItem(title: "Americas Country", streamURL: .americasCountry, imageName: "americasCountry")
         ]
     }()
 }
+
