@@ -17,13 +17,7 @@ class RadioItemCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.containerView.setRoundedCorners(radius: 10.0)
-        
-        streamTitleLabel.layer.shadowColor = UIColor.black.cgColor
-        streamTitleLabel.layer.shadowRadius = 4.0
-        streamTitleLabel.layer.shadowOpacity = 1.0
-        streamTitleLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
-        streamTitleLabel.layer.masksToBounds = false
+        self.posterImageView.layer.cornerRadius = 10.0
     }
     
     // MARK: - Configurable

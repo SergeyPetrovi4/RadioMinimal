@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RadioDashboardListViewProtocol: class {
     
 }
 
 protocol RadioDashboardListPresenterProtocol {
+    
     var items: [RadioItem] { get }
+    func play(itemAt index: Int, controller: UIViewController?)
 }
