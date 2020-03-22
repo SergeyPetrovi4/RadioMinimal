@@ -15,52 +15,57 @@
                 <rect key="frame" x="0.0" y="0.0" width="344" height="67"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCh-Lx-Yph">
-                        <rect key="frame" x="0.0" y="0.0" width="344" height="67"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bzi-fW-wbx">
+                        <rect key="frame" x="16" y="8" width="312" height="51"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0tD-3D-302">
-                                <rect key="frame" x="16" y="8" width="312" height="51"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZ1-Ae-4qe">
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="51"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sq-uC-fWp">
-                                        <rect key="frame" x="0.0" y="4.5" width="42" height="42"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0tD-3D-302">
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="51"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehT-fv-7N5">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
-                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sq-uC-fWp">
+                                                <rect key="frame" x="0.0" y="4.5" width="42" height="42"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehT-fv-7N5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ehT-fv-7N5" secondAttribute="bottom" id="3ql-hl-PNw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ehT-fv-7N5" secondAttribute="trailing" id="GMK-uC-Vzg"/>
+                                                    <constraint firstAttribute="height" constant="42" id="Mtm-jz-Bom"/>
+                                                    <constraint firstItem="ehT-fv-7N5" firstAttribute="leading" secondItem="2Sq-uC-fWp" secondAttribute="leading" id="Nf6-4d-cKv"/>
+                                                    <constraint firstItem="ehT-fv-7N5" firstAttribute="top" secondItem="2Sq-uC-fWp" secondAttribute="top" id="Scx-cN-0cL"/>
+                                                    <constraint firstAttribute="width" constant="42" id="v1i-e7-tpK"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DnB Radio Record" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKE-8P-a7L">
+                                                <rect key="frame" x="58" y="15.5" width="254" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="ehT-fv-7N5" secondAttribute="bottom" id="3ql-hl-PNw"/>
-                                            <constraint firstAttribute="trailing" secondItem="ehT-fv-7N5" secondAttribute="trailing" id="GMK-uC-Vzg"/>
-                                            <constraint firstAttribute="height" constant="42" id="Mtm-jz-Bom"/>
-                                            <constraint firstItem="ehT-fv-7N5" firstAttribute="leading" secondItem="2Sq-uC-fWp" secondAttribute="leading" id="Nf6-4d-cKv"/>
-                                            <constraint firstItem="ehT-fv-7N5" firstAttribute="top" secondItem="2Sq-uC-fWp" secondAttribute="top" id="Scx-cN-0cL"/>
-                                            <constraint firstAttribute="width" constant="42" id="v1i-e7-tpK"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DnB Radio Record" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKE-8P-a7L">
-                                        <rect key="frame" x="58" y="15.5" width="254" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0tD-3D-302" secondAttribute="trailing" id="3b4-Nz-0hS"/>
+                                    <constraint firstItem="0tD-3D-302" firstAttribute="leading" secondItem="iZ1-Ae-4qe" secondAttribute="leading" id="Qji-te-Fsr"/>
+                                    <constraint firstAttribute="height" priority="999" constant="51" id="dpg-H7-4xS"/>
+                                    <constraint firstAttribute="bottom" secondItem="0tD-3D-302" secondAttribute="bottom" id="lkt-J0-xIE"/>
+                                    <constraint firstItem="0tD-3D-302" firstAttribute="top" secondItem="iZ1-Ae-4qe" secondAttribute="top" id="mZU-Gr-tAg"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="0tD-3D-302" firstAttribute="leading" secondItem="zCh-Lx-Yph" secondAttribute="leading" constant="16" id="P9C-gB-adl"/>
-                            <constraint firstAttribute="height" priority="999" constant="68" id="VsH-mj-HHB"/>
-                            <constraint firstAttribute="bottom" secondItem="0tD-3D-302" secondAttribute="bottom" constant="8" id="qAj-80-7lF"/>
-                            <constraint firstAttribute="trailing" secondItem="0tD-3D-302" secondAttribute="trailing" constant="16" id="ucr-tY-EP4"/>
-                            <constraint firstItem="0tD-3D-302" firstAttribute="top" secondItem="zCh-Lx-Yph" secondAttribute="top" constant="8" id="xFg-1A-gFp"/>
-                        </constraints>
-                    </view>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zCh-Lx-Yph" firstAttribute="top" secondItem="Ngo-ta-yHy" secondAttribute="top" id="K6b-Vh-20f"/>
-                    <constraint firstAttribute="bottom" secondItem="zCh-Lx-Yph" secondAttribute="bottom" id="jpH-kA-B1F"/>
-                    <constraint firstAttribute="trailing" secondItem="zCh-Lx-Yph" secondAttribute="trailing" id="mC7-nd-FBv"/>
-                    <constraint firstItem="zCh-Lx-Yph" firstAttribute="leading" secondItem="Ngo-ta-yHy" secondAttribute="leading" id="wk4-Kx-gx1"/>
+                    <constraint firstAttribute="trailing" secondItem="Bzi-fW-wbx" secondAttribute="trailing" constant="16" id="AQJ-v2-lCY"/>
+                    <constraint firstItem="Bzi-fW-wbx" firstAttribute="top" secondItem="Ngo-ta-yHy" secondAttribute="top" constant="8" id="FB4-a5-0Oo"/>
+                    <constraint firstAttribute="bottom" secondItem="Bzi-fW-wbx" secondAttribute="bottom" constant="8" id="ONT-1s-NRV"/>
+                    <constraint firstItem="Bzi-fW-wbx" firstAttribute="leading" secondItem="Ngo-ta-yHy" secondAttribute="leading" constant="16" id="yMZ-4w-qUh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

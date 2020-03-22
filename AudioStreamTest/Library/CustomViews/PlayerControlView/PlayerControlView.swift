@@ -48,6 +48,7 @@ class PlayerControlView: UIView {
         instance.posterContainerView.layer.shadowOffset = CGSize(width: 0, height: 4.0)
         instance.posterContainerView.layer.shadowColor = UIColor.black.cgColor
         instance.posterContainerView.layer.shadowOpacity = 0.3
+        instance.posterContainerView.layer.shouldRasterize = true
         
         return instance
     }

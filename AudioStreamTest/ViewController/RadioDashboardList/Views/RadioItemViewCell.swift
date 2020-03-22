@@ -23,6 +23,7 @@ class RadioItemViewCell: UITableViewCell {
         self.posterContainerView.layer.shadowOffset = CGSize(width: 0, height: 4.0)
         self.posterContainerView.layer.shadowColor = UIColor.black.cgColor
         self.posterContainerView.layer.shadowOpacity = 0.3
+        self.posterContainerView.layer.shouldRasterize = true
     }
     
     // MARK: - Configurable
@@ -30,5 +31,13 @@ class RadioItemViewCell: UITableViewCell {
     func configure(with item: RadioItem) {
         self.posterImageView.image = UIImage(named: item.imageName)
         self.streamTitleLabel.text = item.title
+    }
+    
+    // MARK: - Selection
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+//        self.contentView.backgroundColor = .blue
     }
 }
