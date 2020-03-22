@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-protocol RadioDashboardListViewProtocol: class {
+protocol RadioDashboardListViewProtocol: class, RemoteControlDelegate {
     
 }
 
 protocol RadioDashboardListPresenterProtocol {
     
     var items: [RadioItem] { get }
-    func play(itemAt index: Int, controller: UIViewController?)
+    func set(remoteCenterDelegate controller: UIViewController?)
 }
