@@ -25,7 +25,7 @@ class RadioDashboardListPresenter: RadioDashboardListPresenterProtocol {
         return RadioItems.values
     }()
     
-    func play(itemAt index: Int, controller: UIViewController?) {
-        PlayerManager.shared.play(stream: self.items[index], controller: controller)
+    func set(remoteCenterDelegate controller: UIViewController?) {
+        RemoteControlManager.setupRemoteTransportControls(delegate: controller as? RemoteControlDelegate)
     }
 }

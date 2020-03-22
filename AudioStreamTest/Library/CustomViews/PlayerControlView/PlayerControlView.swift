@@ -75,6 +75,7 @@ class PlayerControlView: UIView {
         self.streamTitleLabel.text = " "
         
         if action == .play {
+            self.streamTitleLabel.text = "Loading... Please wait... Loading... Please wait..."
             self.playButton.setImage(UIImage(systemName: "stop.fill"), for: .normal)
             self.playState = .stop
             return
@@ -91,10 +92,5 @@ class PlayerControlView: UIView {
     
     func configure(image name: String) {
         self.posterImageView.image = UIImage(named: name)
-    }
-    
-    func disableIfNeeded(action: Action) {
-        
-//        self. action == .forward
     }
 }
