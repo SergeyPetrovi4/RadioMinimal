@@ -32,7 +32,7 @@ class RadioDashboardListViewController: UITableViewController, RadioDashboardLis
     
     private func setupTableView() {
 
-        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: self.playerControlView.frame.height + self.view.safeAreaInsets.bottom, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: self.playerControlView.frame.height + self.view.safeAreaInsets.bottom + 32, right: 0)
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.register(UINib(nibName: String(describing: RadioItemViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: RadioItemViewCell.self))

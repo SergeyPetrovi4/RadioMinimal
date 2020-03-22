@@ -13,6 +13,7 @@ class RadioItemViewCell: UITableViewCell {
     @IBOutlet weak var posterContainerView: UIView!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var streamTitleLabel: UILabel!
+    @IBOutlet weak var loaderImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,14 @@ class RadioItemViewCell: UITableViewCell {
         self.posterContainerView.layer.shadowColor = UIColor.black.cgColor
         self.posterContainerView.layer.shadowOpacity = 0.3
         self.posterContainerView.layer.shouldRasterize = true
+        
+        self.loaderImageView.isHidden = true
+        
+        if let gifLoader = UIImage.gifImageWithName("loader") {
+            let tintableImage = gifLoader.withRenderingMode(.alwaysTemplate)
+            self.loaderImageView.image = tintableImage
+            self.loaderImageView.tintColor = .systemBlue
+        }
     }
     
     // MARK: - Configurable
@@ -38,6 +47,6 @@ class RadioItemViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-//        self.contentView.backgroundColor = .blue
+        self.loaderImageView.isHidden = !selected
     }
 }

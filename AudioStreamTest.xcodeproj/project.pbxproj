@@ -21,6 +21,8 @@
 		67CF413E241C041500236F98 /* RadioItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CF413C241C041500236F98 /* RadioItemViewCell.xib */; };
 		67CF4144241D828000236F98 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF4143241D828000236F98 /* StoryboardManager.swift */; };
 		67E7F2142427C5A1000C248B /* RemoteControlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7F2132427C5A1000C248B /* RemoteControlManager.swift */; };
+		67E7F2162428235F000C248B /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E7F2152428235F000C248B /* UIImage.swift */; };
+		67E7F21C24282964000C248B /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67E7F21B24282964000C248B /* loader.gif */; };
 		67FD93A0242381BD00793F93 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD939F242381BD00793F93 /* PlayerManager.swift */; };
 		67FD93A32423A53C00793F93 /* AVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD93A22423A53C00793F93 /* AVPlayer.swift */; };
 		67FD93A62423EF7900793F93 /* PlayerControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD93A52423EF7900793F93 /* PlayerControlView.swift */; };
@@ -46,6 +48,8 @@
 		67CF413C241C041500236F98 /* RadioItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioItemViewCell.xib; sourceTree = "<group>"; };
 		67CF4143241D828000236F98 /* StoryboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 		67E7F2132427C5A1000C248B /* RemoteControlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlManager.swift; sourceTree = "<group>"; };
+		67E7F2152428235F000C248B /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		67E7F21B24282964000C248B /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
 		67FD939F242381BD00793F93 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		67FD93A22423A53C00793F93 /* AVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayer.swift; sourceTree = "<group>"; };
 		67FD93A52423EF7900793F93 /* PlayerControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlView.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				6779BFF124178D9000DCAE26 /* Assets.xcassets */,
+				67E7F21B24282964000C248B /* loader.gif */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				67FD93A22423A53C00793F93 /* AVPlayer.swift */,
+				67E7F2152428235F000C248B /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 				6779BFF524178D9000DCAE26 /* LaunchScreen.storyboard in Resources */,
 				67FD93A82423EF8500793F93 /* PlayerControlView.xib in Resources */,
 				67CF413E241C041500236F98 /* RadioItemViewCell.xib in Resources */,
+				67E7F21C24282964000C248B /* loader.gif in Resources */,
 				6779BFF224178D9000DCAE26 /* Assets.xcassets in Resources */,
 				6779BFF024178D8E00DCAE26 /* Main.storyboard in Resources */,
 			);
@@ -309,6 +316,7 @@
 				67CF4130241BFA5F00236F98 /* RadioDashboardListViewController.swift in Sources */,
 				67CF4136241BFB3B00236F98 /* RadioItems.swift in Sources */,
 				67FD93A0242381BD00793F93 /* PlayerManager.swift in Sources */,
+				67E7F2162428235F000C248B /* UIImage.swift in Sources */,
 				67CF412F241BFA5F00236F98 /* RadioDashboardListPresenter.swift in Sources */,
 				67CF4133241BFAA600236F98 /* RadioItem.swift in Sources */,
 				67FD93A62423EF7900793F93 /* PlayerControlView.swift in Sources */,

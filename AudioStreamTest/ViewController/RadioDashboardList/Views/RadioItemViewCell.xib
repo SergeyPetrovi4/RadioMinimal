@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZ1-Ae-4qe">
                                 <rect key="frame" x="0.0" y="0.0" width="312" height="51"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0tD-3D-302">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0tD-3D-302">
                                         <rect key="frame" x="0.0" y="0.0" width="312" height="51"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sq-uC-fWp">
@@ -42,10 +42,17 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DnB Radio Record" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKE-8P-a7L">
-                                                <rect key="frame" x="58" y="15.5" width="254" height="20.5"/>
+                                                <rect key="frame" x="52" y="15.5" width="226" height="20.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fhn-mz-7de">
+                                                <rect key="frame" x="288" y="13.5" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Cj6-sT-wan"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Rxh-Br-yX6"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -69,6 +76,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="loaderImageView" destination="Fhn-mz-7de" id="Xtr-Pj-hMu"/>
                 <outlet property="posterContainerView" destination="2Sq-uC-fWp" id="yWs-2k-i7K"/>
                 <outlet property="posterImageView" destination="ehT-fv-7N5" id="npR-0E-2uT"/>
                 <outlet property="streamTitleLabel" destination="NKE-8P-a7L" id="6VU-Fz-H59"/>
