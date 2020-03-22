@@ -22,8 +22,38 @@ class RadioDashboardListViewController: UIViewController, RadioDashboardListView
         self.presenter = RadioDashboardListPresenter(for: self)
         
         self.playerControlView = PlayerControlView.instanceFromNib(for: self.view) { (action) in
+            self.controlView(action: action)
+        }
             
-            switch action {
+        
+        self.setupCollectionView()
+        self.presenter.set(remoteCenterDelegate: self)
+    }
+    
+    // MARK: - UI / Private
+    
+    private func setupCollectionView() {
+        
+        let layout = RadioDashboardFlowLayout()
+        layout.layoutType = .list
+        self.collectionView.collectionViewLayout = layout
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: self.playerControlView.frame.height + self.view.safeAreaInsets.bottom, right: 0)
+        
+        self.collectionView.register(UINib(nibName: String(describing: RadioItemCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: RadioItemCollectionViewCell.self))
+    }
+    
+    
+    // MARK: - Private
+    
+    private func select(itemAtIndexPath indexPath: IndexPath) {
+        self.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
+    }
+    
+    private func controlView(action: PlayerControlView.Action) {
+        
+        switch action {
                 
             case .play:
                 
@@ -73,33 +103,15 @@ class RadioDashboardListViewController: UIViewController, RadioDashboardListView
                 PlayerManager.shared.audioPlayer?.stop()
                 self.playerControlView.set(action: .stop)
             }
-        }
-        
-        self.setupCollectionView()
     }
-    
-    // MARK: - UI
-    
-    private func setupCollectionView() {
         
-        let layout = RadioDashboardFlowLayout()
-        layout.layoutType = .list
-        self.collectionView.collectionViewLayout = layout
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: self.playerControlView.frame.height + self.view.safeAreaInsets.bottom, right: 0)
-        
-        self.collectionView.register(UINib(nibName: String(describing: RadioItemCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: RadioItemCollectionViewCell.self))
-    }
-    
-    
-    // MARK: - Private
-    
-    private func select(itemAtIndexPath indexPath: IndexPath) {
-        self.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
-    }
-    
     // MARK: - RadioDashboardListViewProtocol
+
+    // MARK: - RemoteControlDelegate
+    
+    func set(action: PlayerControlView.Action) {
+        self.controlView(action: action)
+    }
 }
 
 extension RadioDashboardListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -146,9 +158,21 @@ extension RadioDashboardListViewController: AVPlayerItemMetadataOutputPushDelega
     func metadataOutput(_ output: AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVTimedMetadataGroup], from track: AVPlayerItemTrack?) {
 
         guard let item = groups.first?.items.first, let title = item.value(forKeyPath: "value") as? String else {
+            self.playerControlView.streamTitleLabel.text = " "
             return
         }
 
         self.playerControlView.streamTitleLabel.text = title
     }
 }
+//
+//extension RadioDashboardListViewController: AVAudioPlayerDelegate {
+//
+//    //MARK: - AVAudioPlayerDelegate
+//
+//    override func remoteControlReceived(with event: UIEvent?) {
+//
+//        let rc = event?.subtype
+//        print("rc.rawValue: \(rc?.rawValue)")
+//    }
+//}

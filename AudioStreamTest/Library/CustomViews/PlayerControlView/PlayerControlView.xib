@@ -62,11 +62,11 @@
                                                 <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8hD-Ra-rMI">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8hD-Ra-rMI">
                                                 <rect key="frame" x="0.0" y="27.5" width="215" height="32"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sti-wE-Iek">
-                                                        <rect key="frame" x="0.0" y="5" width="48" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="bJk-eI-Arh"/>
                                                         </constraints>
@@ -77,7 +77,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05W-Hv-D6S">
-                                                        <rect key="frame" x="99" y="0.0" width="17.5" height="32"/>
+                                                        <rect key="frame" x="77" y="0.0" width="61" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="pZP-a0-N0v"/>
                                                         </constraints>
@@ -93,7 +93,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDA-ws-TJh">
-                                                        <rect key="frame" x="167" y="5" width="48" height="22"/>
+                                                        <rect key="frame" x="154" y="0.0" width="61" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="5c4-HK-JXw"/>
                                                         </constraints>
