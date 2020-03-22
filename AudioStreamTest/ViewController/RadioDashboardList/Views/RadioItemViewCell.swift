@@ -8,9 +8,9 @@
 
 import UIKit
 
-class RadioItemCollectionViewCell: UICollectionViewCell {
+class RadioItemViewCell: UITableViewCell {
 
-    @IBOutlet weak var containerView: ShadowedView!
+    @IBOutlet weak var posterContainerView: UIView!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var streamTitleLabel: UILabel!
     
@@ -18,6 +18,11 @@ class RadioItemCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.posterImageView.layer.cornerRadius = 10.0
+        self.posterContainerView.layer.cornerRadius = 10.0
+        self.posterContainerView.layer.shadowRadius = 4.0
+        self.posterContainerView.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+        self.posterContainerView.layer.shadowColor = UIColor.black.cgColor
+        self.posterContainerView.layer.shadowOpacity = 0.3
     }
     
     // MARK: - Configurable

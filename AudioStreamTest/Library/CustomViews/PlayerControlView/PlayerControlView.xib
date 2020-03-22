@@ -32,18 +32,28 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BRj-9Y-ox0">
                                         <rect key="frame" x="12" y="10" width="64" height="64"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFz-MV-kSL">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-Cc-Z2Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFz-MV-kSL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="64" id="BjK-A2-JJS"/>
-                                                    <constraint firstAttribute="width" constant="64" id="CEt-FF-Dzh"/>
+                                                    <constraint firstItem="xFz-MV-kSL" firstAttribute="top" secondItem="HFS-Cc-Z2Y" secondAttribute="top" id="BiF-pI-7hA"/>
+                                                    <constraint firstAttribute="width" constant="64" id="Ifv-Ue-pFt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xFz-MV-kSL" secondAttribute="bottom" id="KsB-Os-cy5"/>
+                                                    <constraint firstItem="xFz-MV-kSL" firstAttribute="leading" secondItem="HFS-Cc-Z2Y" secondAttribute="leading" id="QyH-sW-6gx"/>
+                                                    <constraint firstAttribute="height" constant="64" id="bh4-Ah-buS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xFz-MV-kSL" secondAttribute="trailing" id="nmp-P7-KqY"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </imageView>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-Fb-3Lg">
@@ -54,23 +64,20 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ybt-Mn-8vG">
-                                        <rect key="frame" x="108" y="12.5" width="215" height="59.5"/>
+                                        <rect key="frame" x="108" y="12" width="215" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ag-2b-Dni" customClass="MarqueeLabel" customModule="Radio_Minimal" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="215" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="215" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8hD-Ra-rMI">
-                                                <rect key="frame" x="0.0" y="27.5" width="215" height="32"/>
+                                                <rect key="frame" x="0.0" y="28.5" width="215" height="32"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sti-wE-Iek">
                                                         <rect key="frame" x="0.0" y="0.0" width="61" height="32"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="48" id="bJk-eI-Arh"/>
-                                                        </constraints>
-                                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="backward.end.fill" catalog="system"/>
                                                         <connections>
                                                             <action selector="didTapBackwardButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="YGE-tX-M8I"/>
@@ -82,7 +89,7 @@
                                                             <constraint firstAttribute="height" constant="32" id="pZP-a0-N0v"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="17"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="play.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="thin">
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -94,10 +101,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDA-ws-TJh">
                                                         <rect key="frame" x="154" y="0.0" width="61" height="32"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="48" id="5c4-HK-JXw"/>
-                                                        </constraints>
-                                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="forward.end.fill" catalog="system"/>
                                                         <connections>
                                                             <action selector="didTapForwardButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="e2u-5l-AhV"/>
@@ -149,6 +153,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="playButton" destination="05W-Hv-D6S" id="1jI-3H-ayN"/>
+                <outlet property="posterContainerView" destination="HFS-Cc-Z2Y" id="euH-SB-RJl"/>
                 <outlet property="posterImageView" destination="xFz-MV-kSL" id="MCm-bM-ew3"/>
                 <outlet property="streamTitleLabel" destination="6ag-2b-Dni" id="qpc-Eg-FXq"/>
             </connections>
