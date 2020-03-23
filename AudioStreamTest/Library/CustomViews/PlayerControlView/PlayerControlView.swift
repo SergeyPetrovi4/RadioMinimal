@@ -42,11 +42,20 @@ class PlayerControlView: UIView {
         
         view.bringSubviewToFront(instance)
         
+        instance.posterImageView.layer.cornerRadius = 10.0
+        instance.posterContainerView.layer.cornerRadius = 10.0
+        instance.posterContainerView.layer.shadowRadius = 4.0
+        instance.posterContainerView.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+        instance.posterContainerView.layer.shadowColor = UIColor.black.cgColor
+        instance.posterContainerView.layer.shadowOpacity = 0.3
+        instance.posterContainerView.layer.shouldRasterize = true
+        
         return instance
     }
     
     // MARK: - Outlets
     
+    @IBOutlet weak var posterContainerView: UIView!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var streamTitleLabel: MarqueeLabel!
     
