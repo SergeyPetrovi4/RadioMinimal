@@ -9,10 +9,8 @@
 import UIKit
 import AVKit
 
-class RadioDashboardListViewController: UIViewController, RadioDashboardListViewProtocol  {
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
+class RadioDashboardListViewController: UITableViewController, RadioDashboardListViewProtocol, AVPlayerItemMetadataOutputPushDelegate {
+        
     private var presenter: RadioDashboardListPresenterProtocol!
     private var playerControlView: PlayerControlView!
     
@@ -26,29 +24,25 @@ class RadioDashboardListViewController: UIViewController, RadioDashboardListView
         }
             
         
-        self.setupCollectionView()
+        self.setupTableView()
         self.presenter.set(remoteCenterDelegate: self)
     }
     
     // MARK: - UI / Private
     
-    private func setupCollectionView() {
-        
-        let layout = RadioDashboardFlowLayout()
-        layout.layoutType = .list
-        self.collectionView.collectionViewLayout = layout
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: self.playerControlView.frame.height + self.view.safeAreaInsets.bottom, right: 0)
-        
-        self.collectionView.register(UINib(nibName: String(describing: RadioItemCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: RadioItemCollectionViewCell.self))
+    private func setupTableView() {
+
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: self.playerControlView.frame.height + self.view.safeAreaInsets.bottom + 32, right: 0)
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 44.0
+        self.tableView.register(UINib(nibName: String(describing: RadioItemViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: RadioItemViewCell.self))
     }
     
     
     // MARK: - Private
     
     private func select(itemAtIndexPath indexPath: IndexPath) {
-        self.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
+        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
     }
     
     private func controlView(action: PlayerControlView.Action) {
@@ -64,36 +58,36 @@ class RadioDashboardListViewController: UIViewController, RadioDashboardListView
                     PlayerManager.shared.play(stream: self.presenter.items.first, controller: self)
                     self.playerControlView.configure(image: self.presenter.items.first!.imageName)
                     self.playerControlView.set(action: .play)
-                    self.select(itemAtIndexPath: IndexPath(item: 0, section: 0))
+                    self.select(itemAtIndexPath: IndexPath(row: 0, section: 0))
                     return
                 }
                 
                 // Continue playing after stopping
                 
-                if let indexPath = self.collectionView.indexPathsForSelectedItems?.first {
+                if let indexPath = self.tableView.indexPathForSelectedRow {
                     
-                    PlayerManager.shared.play(stream: self.presenter.items[indexPath.item], controller: self)
-                    self.playerControlView.configure(image: self.presenter.items[indexPath.item].imageName)
+                    PlayerManager.shared.play(stream: self.presenter.items[indexPath.row], controller: self)
+                    self.playerControlView.configure(image: self.presenter.items[indexPath.row].imageName)
                     self.playerControlView.set(action: .play)
                     self.select(itemAtIndexPath: indexPath)
                 }
                 
             case .forward:
                                 
-                if let indexPath = self.collectionView.indexPathsForSelectedItems?.first, indexPath.item < self.presenter.items.count - 1 {
+                if let indexPath = self.tableView.indexPathForSelectedRow, indexPath.row < self.presenter.items.count - 1 {
                                     
-                    PlayerManager.shared.play(stream: self.presenter.items[indexPath.item + 1], controller: self)
-                    self.playerControlView.configure(image: self.presenter.items[indexPath.item + 1].imageName)
+                    PlayerManager.shared.play(stream: self.presenter.items[indexPath.row + 1], controller: self)
+                    self.playerControlView.configure(image: self.presenter.items[indexPath.row + 1].imageName)
                     self.playerControlView.set(action: .play)
-                    self.select(itemAtIndexPath: IndexPath(item: indexPath.item + 1, section: 0))
+                    self.select(itemAtIndexPath: IndexPath(item: indexPath.row + 1, section: 0))
                 }
                 
             case .backward:
                                 
-                if let indexPath = self.collectionView.indexPathsForSelectedItems?.first, indexPath.item > 0 {
+                if let indexPath = self.tableView.indexPathForSelectedRow, indexPath.item > 0 {
                                     
-                    PlayerManager.shared.play(stream: self.presenter.items[indexPath.item - 1], controller: self)
-                    self.playerControlView.configure(image: self.presenter.items[indexPath.item - 1].imageName)
+                    PlayerManager.shared.play(stream: self.presenter.items[indexPath.row - 1], controller: self)
+                    self.playerControlView.configure(image: self.presenter.items[indexPath.row - 1].imageName)
                     self.playerControlView.set(action: .play)
                     self.select(itemAtIndexPath: IndexPath(item: indexPath.item - 1, section: 0))
                 }
@@ -112,46 +106,28 @@ class RadioDashboardListViewController: UIViewController, RadioDashboardListView
     func set(action: PlayerControlView.Action) {
         self.controlView(action: action)
     }
-}
-
-extension RadioDashboardListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    // MARK: - UICollectionViewDataSource
+    // MARK: - UITableViewDelegate
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        PlayerManager.shared.play(stream: self.presenter.items[indexPath.row], controller: self)
+        self.playerControlView.configure(image: self.presenter.items[indexPath.row].imageName)
+        self.playerControlView.set(action: .play)
+    }
+    
+    // MARK: - UITableViewDataSource
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.presenter.items.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: RadioItemCollectionViewCell.self), for: indexPath) as! RadioItemCollectionViewCell
-        cell.configure(with: self.presenter.items[indexPath.item])
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RadioItemViewCell.self), for: indexPath) as! RadioItemViewCell
+        cell.configure(with: self.presenter.items[indexPath.row])
         return cell
     }
-    
-    // MARK: - UICollectionViewDelegate
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        PlayerManager.shared.play(stream: self.presenter.items[indexPath.item], controller: self)
-        self.playerControlView.configure(image: self.presenter.items[indexPath.item].imageName)
-        self.playerControlView.set(action: .play)
-    }
-}
-
-extension RadioDashboardListViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        guard let layout = collectionView.collectionViewLayout as? RadioDashboardFlowLayout else {
-            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        }
-        
-        return layout.sectionInset
-    }
-}
-
-extension RadioDashboardListViewController: AVPlayerItemMetadataOutputPushDelegate {
     
     //MARK: - AVPlayerItemMetadataOutputPushDelegate
 
@@ -165,14 +141,3 @@ extension RadioDashboardListViewController: AVPlayerItemMetadataOutputPushDelega
         self.playerControlView.streamTitleLabel.text = title
     }
 }
-//
-//extension RadioDashboardListViewController: AVAudioPlayerDelegate {
-//
-//    //MARK: - AVAudioPlayerDelegate
-//
-//    override func remoteControlReceived(with event: UIEvent?) {
-//
-//        let rc = event?.subtype
-//        print("rc.rawValue: \(rc?.rawValue)")
-//    }
-//}
